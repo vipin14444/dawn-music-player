@@ -1,0 +1,397 @@
+@import "../theme.scss";
+
+.dashboard {
+    background-color: $col-black-50;
+    flex: 1;
+
+    .header {
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+
+        nav {
+            gap: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            .nav-link.active {
+                color: $col-primary;
+            }
+        }
+
+        .search-container {
+            border: 1px solid rgb(121, 121, 121);
+            padding: 0.5rem;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            gap: 0.4rem;
+
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 0.8rem;
+            }
+        }
+
+        .user-action-container {
+            gap: 1rem;
+
+            .user-info-container {
+                $bg-color: rgba(235, 230, 255, 0.282);
+                color: #b5b7bb;
+
+                font-size: 0.8rem;
+                font-weight: 600;
+                background-color: $bg-color;
+                border-radius: 4px;
+
+                .dp-container {
+                    padding: 8px;
+                    border-radius: 4px;
+                    background-color: $bg-color;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 4px;
+                    }
+                }
+
+                .name {
+                    padding: 8px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .trending-container {
+        padding: 1rem 2rem;
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .trending-item {
+            .song-name {
+                font-size: 3rem;
+                font-weight: 700;
+            }
+
+            .song-meta {
+                font-size: 1.1rem;
+                gap: 1rem;
+                margin-top: 0.2rem;
+
+                .singer {
+                    font-weight: 600;
+                }
+
+                .play-count {
+                    color: rgb(189, 189, 189);
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                }
+            }
+
+            .trending-song-actions {
+                gap: 1rem;
+                margin-top: 1rem;
+
+                button {
+                    background-color: $col-primary;
+                    color: white;
+                    border: none;
+                    outline: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 2.5rem;
+                    border-radius: 2.5rem;
+                    cursor: pointer;
+
+                    &.primary {
+                        padding: 0 1rem;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                    }
+
+                    &.secondary {
+                        width: 2.5rem;
+                        background-color: rgba(255, 255, 255, 0.05);
+                        border: 2px solid white;
+                        color: $col-primary;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        padding: 2rem;
+        gap: 1.5rem;
+
+        .card {
+            background-color: $col-black-200;
+            border-radius: 4px;
+            width: 100%;
+
+            .card-header {
+                font-size: 0.8rem;
+                font-weight: 600;
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+
+                a {
+                    color: rgb(199, 199, 199);
+                    font-weight: 500;
+                }
+            }
+
+            .card-body {
+                padding: 0 1rem 1rem;
+
+                &.nopadding {
+                    padding: 0;
+                }
+            }
+        }
+
+        .charts-container {
+            flex: 1;
+            gap: 1.5rem;
+
+            .artists-card {
+                .card-body {
+                    justify-content: space-between;
+                    gap: 1rem;
+
+                    .artist-one {
+                        text-align: center;
+                        img {
+                            border-radius: 8px;
+                            object-fit: cover;
+                            width: 100px;
+                            height: 80px;
+                            object-position: top;
+                        }
+
+                        .artist-name {
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            margin-top: 0.3rem;
+                        }
+                        .artist-plays {
+                            color: rgb(189, 189, 189);
+                            font-size: 0.65rem;
+                            font-weight: 600;
+                            margin-top: 0.2rem;
+                        }
+                    }
+                }
+            }
+
+            .genre-and-top-charts {
+                gap: 1.5rem;
+
+                .card {
+                    width: unset;
+                }
+
+                .top-charts-card {
+                    flex: 1.5;
+
+                    .card-body {
+                        gap: 1rem;
+
+                        .top-chart-one {
+                            gap: 0.75rem;
+
+                            .top-chart-rank {
+                                font-size: 0.8rem;
+                                font-weight: 500;
+                            }
+                            .top-chart-album-art {
+                                width: 3.5rem;
+                                height: 3.5rem;
+                                border-radius: 8px;
+                            }
+
+                            .top-chart-song-meta {
+                                .top-chart-song-name {
+                                    font-size: 0.8rem;
+                                    font-weight: 600;
+                                }
+                                .top-chart-singer {
+                                    font-size: 0.6rem;
+                                }
+                            }
+
+                            .top-chart-duration {
+                                margin-left: auto;
+                                padding-left: 1rem;
+                                font-size: 0.8rem;
+                                font-weight: 600;
+                            }
+
+                            .btn-top-chart-play {
+                                background-color: rgba(255, 255, 255, 0.05);
+                                border: 1px solid rgb(145, 145, 145);
+                                color: $col-primary;
+                                border-radius: 4px;
+                                padding: 0.25rem;
+                                margin-left: 0.5rem;
+                            }
+
+                            .btn-top-chart-expand {
+                                font-size: 0.5rem;
+                                background-color: rgba(255, 255, 255, 0.05);
+                                border: 1px solid rgb(145, 145, 145);
+                                color: white;
+                                border-radius: 4px;
+                                padding: 0.25rem;
+                            }
+                        }
+                    }
+                }
+
+                .genre-card {
+                    flex: 1;
+
+                    .card-body {
+                        flex-wrap: wrap;
+                        gap: 1rem;
+
+                        .genre-one {
+                            white-space: nowrap;
+                            padding: 1rem;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            flex: 1;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .player-container {
+            min-width: 300px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .player-card {
+                height: 100%;
+
+                .card-body {
+                    flex: 1;
+
+                    .card-body-wrapper {
+                        padding-top: 1rem;
+                        height: 100%;
+                    }
+
+                    .music-player-meta {
+                        padding-inline: 1rem;
+                        flex: 1;
+
+                        img {
+                            width: 200px;
+                            height: 180px;
+                            border-radius: 8px;
+                        }
+
+                        .current-song-name {
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                            margin-top: 1rem;
+                        }
+
+                        .current-singer-name {
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            margin-top: 0.5rem;
+                        }
+
+                        .current-album-name {
+                            font-size: 0.65rem;
+                            margin-top: 0.5rem;
+                        }
+                    }
+
+                    .seek-container {
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        gap: 0.5rem;
+                        padding-inline: 1rem;
+
+                        .seek {
+                            flex: 1;
+                            height: 2px;
+                            background-color: #49484f;
+                            border-radius: 10px;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                height: 2px;
+                                background-color: white;
+                                width: 50%;
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                left: 50%;
+                                height: 2px;
+                                background-color: $col-black-200;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                border: 2px solid white;
+                            }
+                        }
+                    }
+
+                    .player-actions {
+                        background-color: $col-primary;
+                        width: 100%;
+                        height: 100px;
+                        border-radius: 8px 8px 4px 4px;
+                        margin-top: 2rem;
+                        color: white;
+                        gap: 0.25rem;
+
+                        button {
+                            border:none;
+                            background: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0.8rem;
+                            border-radius: 16px;
+                            font-size: 1.2rem;
+                            color: white;
+
+                            &.play-btn {
+                                color: $col-primary;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

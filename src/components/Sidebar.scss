@@ -1,0 +1,94 @@
+@import "../theme.scss";
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    background-color: $col-black-100;
+    font-size: 0.85rem;
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $col-black-100;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgb(53, 53, 53);
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .logo {
+        font-weight: 600;
+        margin-top: 2.5rem;
+        margin-bottom: 3.5rem;
+        padding-left: 2.5rem;
+        color: white;
+        font-size: 1.1rem;
+        gap: 1rem;
+    }
+
+    .sidebar-link-section {
+        h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            opacity: 0.7;
+            padding-left: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #9d9ca3;
+            font-size: 0.8rem;
+        }
+
+        ul {
+            li {
+                padding: 0.5rem;
+                padding-left: 2.5rem;
+                gap: 1rem;
+                font-weight: 600;
+                font-size: 0.8rem;
+
+                &:hover {
+                    color: $col-primary;
+                    cursor: pointer;
+                    background-color: lighten(
+                        $color: $col-black-100,
+                        $amount: 2
+                    );
+                }
+
+                &.active {
+                    color: $col-primary;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        right: 0;
+                        top: 0;
+                        position: absolute;
+                        background-color: $col-primary;
+                        height: 100%;
+                        width: 3px;
+                        border-radius: 4px 0 0 4px;
+                    }
+                }
+            }
+
+            li + li {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .sidebar-link-section + .sidebar-link-section {
+        margin-top: 3.5rem;
+    }
+}

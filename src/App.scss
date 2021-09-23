@@ -1,0 +1,54 @@
+@import "./theme.scss";
+
+.app {
+    background-color: coral;
+    height: 100vh;
+    display: flex;
+}
+
+.content-container {
+    overflow-y: auto;
+    flex: 1;
+    height: 100%;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $col-black-100;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgb(53, 53, 53);
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.align {
+    align-items: center;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.f-center {
+    align-items: center;
+    justify-content: center;
+}
