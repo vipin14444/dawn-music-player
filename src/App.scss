@@ -1,8 +1,26 @@
 @import "./theme.scss";
 
+body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    @media screen and (max-width: 375px) {
+        font-size: 14px;
+    }
+}
+
+#root {
+    width: inherit;
+    height: inherit;
+}
+
 .app {
-    background-color: coral;
-    height: 100vh;
+    background-color: black;
+    width: inherit;
+    height: inherit;
     display: flex;
 }
 

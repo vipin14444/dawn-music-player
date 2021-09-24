@@ -1,0 +1,19 @@
+@import "../theme.scss";
+
+.charts-container {
+    flex: 1;
+    gap: 1rem;
+
+    .genre-and-top-charts {
+        gap: 1rem;
+        flex-direction: column;
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+        }
+
+        .card {
+            width: unset;
+        }
+    }
+}

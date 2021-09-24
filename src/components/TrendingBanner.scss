@@ -1,0 +1,66 @@
+@import "../theme.scss";
+
+.trending-container {
+    padding: 1rem 1rem;
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    .trending-item {
+        .song-name {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .song-meta {
+            font-size: 1.1rem;
+            gap: 1rem;
+            margin-top: 0.2rem;
+
+            .singer {
+                font-weight: 600;
+            }
+
+            .play-count {
+                color: rgb(189, 189, 189);
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+        }
+
+        .trending-song-actions {
+            gap: 1rem;
+            margin-top: 1rem;
+
+            button {
+                background-color: $col-primary;
+                color: white;
+                border: none;
+                outline: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 2.5rem;
+                border-radius: 2.5rem;
+                cursor: pointer;
+
+                &.primary {
+                    padding: 0 1rem;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+
+                &.secondary {
+                    width: 2.5rem;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 2px solid white;
+                    color: $col-primary;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

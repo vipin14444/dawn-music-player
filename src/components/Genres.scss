@@ -1,0 +1,19 @@
+@import "../theme.scss";
+
+.genre-card {
+    flex: 1;
+
+    .card-body {
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        .genre-one {
+            white-space: nowrap;
+            padding: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            flex: 1;
+            border-radius: 8px;
+        }
+    }
+}

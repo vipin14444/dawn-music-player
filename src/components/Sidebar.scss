@@ -1,6 +1,23 @@
 @import "../theme.scss";
 
 .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.3s ease;
+
+    &.sidebar-active {
+        left: 0;
+    }
+    
+    &.sidebar-inactive {
+        left: -100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        position: unset;
+    }
+
     height: 100%;
     width: 250px;
     background-color: $col-black-100;

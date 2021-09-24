@@ -1,0 +1,28 @@
+@import "../theme.scss";
+
+.card {
+    background-color: $col-black-200;
+    border-radius: 4px;
+    width: 100%;
+
+    .card-header {
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        a {
+            color: rgb(199, 199, 199);
+            font-weight: 500;
+        }
+    }
+
+    .card-body {
+        padding: 0 1rem 1rem;
+
+        &.nopadding {
+            padding: 0;
+        }
+    }
+}

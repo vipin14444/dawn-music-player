@@ -1,0 +1,40 @@
+@import "../theme.scss";
+
+.artists-card {
+    .artists-card-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        // @media screen and (min-width: 1024px) {
+        //     grid-template-columns: repeat(6, 1fr);
+        // }
+    }
+
+    .card-body {
+        justify-content: space-between;
+        gap: 1rem;
+
+        .artist-one {
+            text-align: center;
+            img {
+                border-radius: 8px;
+                object-fit: cover;
+                width: 100px;
+                height: 80px;
+                object-position: top;
+            }
+
+            .artist-name {
+                font-size: 0.8rem;
+                font-weight: 600;
+                margin-top: 0.3rem;
+            }
+            .artist-plays {
+                color: rgb(189, 189, 189);
+                font-size: 0.65rem;
+                font-weight: 600;
+                margin-top: 0.2rem;
+            }
+        }
+    }
+}

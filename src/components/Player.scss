@@ -1,0 +1,126 @@
+@import "../theme.scss";
+
+.player-container {
+    min-width: 300px;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        width: unset;
+    }
+
+    .player-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1024px) {
+            height: unset;
+        }
+
+        .player-card-body {
+            flex: 1;
+
+            .card-body-wrapper {
+                padding-top: 1rem;
+                height: 100%;
+            }
+
+            .music-player-meta {
+                padding-inline: 1rem;
+                flex: 1;
+
+                img {
+                    width: 200px;
+                    height: 180px;
+                    border-radius: 8px;
+                }
+
+                .current-song-name {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                }
+
+                .current-singer-name {
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    margin-top: 0.5rem;
+                }
+
+                .current-album-name {
+                    font-size: 0.65rem;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            .seek-container {
+                font-size: 0.8rem;
+                font-weight: 600;
+                gap: 0.5rem;
+                padding-inline: 1rem;
+                margin-top: 1.5rem;
+
+                .seek {
+                    flex: 1;
+                    height: 2px;
+                    background-color: #49484f;
+                    border-radius: 10px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        height: 2px;
+                        background-color: white;
+                        width: 50%;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        height: 2px;
+                        background-color: $col-black-200;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        border: 2px solid white;
+                    }
+                }
+            }
+
+            .player-actions {
+                background-color: $col-primary;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px 8px 4px 4px;
+                margin-top: 2rem;
+                color: white;
+                gap: 0.25rem;
+
+                button {
+                    border: none;
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0.8rem;
+                    border-radius: 16px;
+                    font-size: 1.2rem;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    &.play-btn {
+                        color: $col-primary;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

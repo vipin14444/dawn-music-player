@@ -1,0 +1,58 @@
+@import "../theme.scss";
+
+header {
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+
+    .icon-btn {
+        padding: 0.6rem;
+        min-width: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        place-content: center;
+        border-radius: 50%;
+
+        &:active {
+            background-color: hsl(0, 0%, 10%);
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .btn-menu {
+            display: none;
+        }
+    }
+
+    .user-action-container {
+        margin-left: auto;
+        .user-info-container {
+            $bg-color: rgba(235, 230, 255, 0.282);
+            color: #b5b7bb;
+
+            font-size: 0.8rem;
+            font-weight: 600;
+            background-color: $bg-color;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+
+            .dp-container {
+                padding: 8px;
+                border-radius: 4px;
+                background-color: $bg-color;
+
+                img {
+                    min-width: 30px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 4px;
+                }
+            }
+
+            .name {
+                padding: 8px;
+                color: white;
+            }
+        }
+    }
+}

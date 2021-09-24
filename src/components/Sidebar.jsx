@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 import { BiPulse } from "react-icons/bi";
 
-const Sidebar = () => {
+const Sidebar = ({ sidebarActive, setSidebarActive }) => {
     const MENU = [
         {
             title: "Menu",
@@ -81,8 +81,15 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="sidebar">
-            <div className="logo flex align">
+        <div
+            className={`sidebar ${
+                sidebarActive ? "sidebar-active" : "sidebar-inactive"
+            }`}
+        >
+            <div
+                className="logo flex align"
+                onClick={(e) => setSidebarActive(false)}
+            >
                 <BiPulse />
                 Groovvy
             </div>
